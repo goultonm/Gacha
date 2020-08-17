@@ -1,0 +1,9 @@
+from tkinter import *
+
+root = Tk()
+root.title ("I did work Mr Craig, I swear.")
+root.iconbitmap('cringe.ico')
+
+
+
+root.mainloop()
