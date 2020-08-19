@@ -1,9 +1,20 @@
 from tkinter import *
 
 root = Tk()
-root.title ("I did work Mr Craig, I swear.")
-root.iconbitmap('cringe.ico')
+root.title ("I did work Mr Craig, I swear.") #the title things
+root.iconbitmap('cringe.ico') #makes astolfo-kun the icon
+root.geometry('1000x600')
 
 
+
+one_sum = PhotoImage(file = 'Summon.gif')
+ten_sum = PhotoImage(file = '10Summon.gif')
+
+
+
+def kys():
+    root.destroy()
+summon = Button(root, text = 'End me !', bd = '0', image = (ten_sum), command = kys) #made a button that does something
+summon.pack(side = 'bottom')
 
 root.mainloop()
