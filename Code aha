@@ -1,4 +1,6 @@
 from tkinter import *
+from sumon_pool import *
+import random
 
 root = Tk()
 root.title ("I did work Mr Craig, I swear.") #the title things
@@ -6,15 +8,41 @@ root.iconbitmap('cringe.ico') #makes astolfo-kun the icon
 root.geometry('1000x600')
 
 
-
+pool_size=len(servants)
 one_sum = PhotoImage(file = 'Summon.gif')
 ten_sum = PhotoImage(file = '10Summon.gif')
 
+def roll():
+    percentage = random.randint(0,99)
+    print(percentage)
+    if percentage ==0:
+        print("ssr")
+    elif percentage <=3:
+        print("sr")
+    elif percentage <=43:
+        print("r")
+    elif percentage <=47:
+        print("ssrce")
+    elif percentage <=59:
+        print("srce")
+    else:
+        print("rce")
 
+def summon():
+    summoned_val = random.randint(0, pool_size-1)
+    summoned =  servants[summoned_val]
+    print(summoned)
 
 def kys():
     root.destroy()
-summon = Button(root, text = 'End me !', bd = '0', image = (ten_sum), command = kys) #made a button that does something
-summon.pack(side = 'bottom')
+one_summon = Button(root, text = 'End me !', bd = '0', image = (one_sum), command = roll) #made a button that does something
+one_summon.place(x=150, y=400)
+
+
+ten_summon = Button(root, text = 'End me !', bd = '0', image = (ten_sum), command = kys) #made a button that does something
+ten_summon.place(x=600, y=400)
+
+
+
 
 root.mainloop()
