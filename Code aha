@@ -8,7 +8,6 @@ root.iconbitmap('cringe.ico') #makes astolfo-kun the icon
 root.geometry('1000x600')
 
 
-pool_size=len(servants)
 one_sum = PhotoImage(file = 'Summon.gif')
 ten_sum = PhotoImage(file = '10Summon.gif')
 
@@ -16,22 +15,52 @@ def roll():
     percentage = random.randint(0,99)
     print(percentage)
     if percentage ==0:
-        print("ssr")
+        summon_ssr()
     elif percentage <=3:
-        print("sr")
+        summon_sr()
     elif percentage <=43:
-        print("r")
+        summon_r()
     elif percentage <=47:
-        print("ssrce")
+        summon_ssrce()
     elif percentage <=59:
-        print("srce")
+        summon_srce()
     else:
-        print("rce")
+        summon_rce()
 
-def summon():
-    summoned_val = random.randint(0, pool_size-1)
-    summoned =  servants[summoned_val]
+
+
+ssr_pool_size=len(ssr)
+def summon_ssr():
+    summoned_val = random.randint(0, ssr_pool_size-1)
+    summoned =  ssr[summoned_val]
     print(summoned)
+
+sr_pool_size=len(sr)
+def summon_sr():
+    summoned_val = random.randint(0, sr_pool_size-1)
+    summoned =  sr[summoned_val]
+    print(summoned)
+r_pool_size=len(r)
+def summon_r():
+    summoned_val = random.randint(0, r_pool_size-1)
+    summoned =  r[summoned_val]
+    print(summoned)
+ssrce_pool_size=len(ssrce)
+def summon_ssrce():
+    summoned_val = random.randint(0, ssrce_pool_size-1)
+    summoned =  ssrce[summoned_val]
+    print(summoned)
+srce_pool_size=len(srce)
+def summon_srce():
+    summoned_val = random.randint(0, srce_pool_size-1)
+    summoned =  srce[summoned_val]
+    print(summoned)
+rce_pool_size=len(srce)
+def summon_rce():
+    summoned_val = random.randint(0, rce_pool_size-1)
+    summoned =  rce[summoned_val]
+    print(summoned)
+
 
 def kys():
     root.destroy()
@@ -46,3 +75,24 @@ ten_summon.place(x=600, y=400)
 
 
 root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#haha funny number
