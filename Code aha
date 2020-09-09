@@ -2,6 +2,8 @@ from tkinter import *
 from sumon_pool import *
 import random
 
+
+
 root = Tk()
 root.title ("I did work Mr Craig, I swear.") #the title things
 root.iconbitmap('cringe.ico') #makes astolfo-kun the icon
@@ -67,32 +69,8 @@ def kys():
 one_summon = Button(root, text = 'End me !', bd = '0', image = (one_sum), command = roll) #made a button that does something
 one_summon.place(x=150, y=400)
 
-
 ten_summon = Button(root, text = 'End me !', bd = '0', image = (ten_sum), command = kys) #made a button that does something
 ten_summon.place(x=600, y=400)
 
 
-
-
 root.mainloop()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#haha funny number
