@@ -14,7 +14,7 @@ one_sum = PhotoImage(file = 'Summon.gif')
 ten_sum = PhotoImage(file = '10Summon.gif')
 
 def roll():
-    percentage = random.randint(0,99)
+    percentage = random.randint(0,5)
     print(percentage)
     if percentage ==0:
         summon_ssr()
@@ -31,22 +31,26 @@ def roll():
 
 
 
-ssr_pool_size=len(ssr)
+ssr_pool_size=len(servant.ssr_pool)
 def summon_ssr():
     summoned_val = random.randint(0, ssr_pool_size-1)
-    summoned =  ssr[summoned_val]
+    summoned =  servant.ssr_pool[summoned_val]
     print(summoned)
+    print(servant.file)
+sr_pool_size=len(servant.sr_pool)
 
-sr_pool_size=len(sr)
 def summon_sr():
     summoned_val = random.randint(0, sr_pool_size-1)
-    summoned =  sr[summoned_val]
+    summoned =  servant.sr_pool[summoned_val]
     print(summoned)
-r_pool_size=len(r)
+    print(servant.file)
+
+r_pool_size=len(servant.r_pool)
 def summon_r():
     summoned_val = random.randint(0, r_pool_size-1)
-    summoned =  r[summoned_val]
+    summoned =  servant.r_pool[summoned_val]
     print(summoned)
+
 ssrce_pool_size=len(ssrce)
 def summon_ssrce():
     summoned_val = random.randint(0, ssrce_pool_size-1)

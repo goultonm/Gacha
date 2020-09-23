@@ -26,10 +26,22 @@ class servant:
     def __repr__(self):
         return self.name
 
+    ssr_pool = []
+    sr_pool = []
+    r_pool = []
+
 servants = []
 for i in range (5):
     servants.append(servant(servant.names[i], servant.rarity[i], i))
 
 print(servants)
 
-for servant in servants: print(servant.rarity)
+for servant in servants:
+    if servant.rarity == servant.rarity.SSR:
+        servant.ssr_pool.append(servant)
+    elif servant.rarity == servant.rarity.SR:
+        servant.sr_pool.append(servant)
+    elif servant.rarity == servant.rarity.R:
+        servant.r_pool.append(servant)
+    else:
+        print("ErrOr")
