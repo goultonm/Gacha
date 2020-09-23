@@ -1,6 +1,9 @@
 from tkinter import *
 from sumon_pool import *
 import random
+from PIL import *
+
+
 
 
 
@@ -36,14 +39,14 @@ def summon_ssr():
     summoned_val = random.randint(0, ssr_pool_size-1)
     summoned =  servant.ssr_pool[summoned_val]
     print(summoned)
-    print(servant.file)
+    print(summoned.file)
 sr_pool_size=len(servant.sr_pool)
 
 def summon_sr():
     summoned_val = random.randint(0, sr_pool_size-1)
     summoned =  servant.sr_pool[summoned_val]
     print(summoned)
-    print(servant.file)
+    print(summoned.file)
 
 r_pool_size=len(servant.r_pool)
 def summon_r():

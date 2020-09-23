@@ -14,13 +14,14 @@ class servant:
     SR = rarity.SR
     SSR = rarity.SSR
 
-    names = ["Odessyeus" , "Mashu" , "Artoria Pendragon" , "Salter" , "Lily" ]
-    rarity = [SSR,R,SSR,SR,SR]
+    names = ["Odessyeus" , "Mashu" , "Artoria Pendragon" , "Salter" , "Lily" , "Nero"]
+    rarity = [SSR,R,SSR,SR,SR,SR]
 
     def __init__(self, name, rarity, num):
         self.name = name
         self.rarity = rarity
         self.num = num
+        print(num)
         if num < 10:
             self.str_num = "00"+str(num)
         elif num < 100:
@@ -37,9 +38,9 @@ class servant:
     r_pool = []
 
 servants = []
-for i in range (5):
+for i in range (6):
     servants.append(servant(servant.names[i], servant.rarity[i], i))
-
+    print(servants[i].file)
 print(servants)
 
 for servant in servants:
