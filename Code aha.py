@@ -1,7 +1,7 @@
 from tkinter import *
 from sumon_pool import *
 import random
-from PIL import *
+from PIL import ImageTk, Image
 
 
 
@@ -9,12 +9,14 @@ from PIL import *
 
 root = Tk()
 root.title ("I did work Mr Craig, I swear.") #the title things
-root.iconbitmap('cringe.ico') #makes astolfo-kun the icon
+root.iconbitmap('cringe.ico') #makes Astolfo-kun the icon
 root.geometry('1000x600')
 
 
 one_sum = PhotoImage(file = 'Summon.gif')
 ten_sum = PhotoImage(file = '10Summon.gif')
+exit_butt = ImageTk.PhotoImage(Image.open('Close.png'))
+
 
 def roll():
     percentage = random.randint(0,5)
@@ -73,11 +75,15 @@ def summon_rce():
 
 def kys():
     root.destroy()
-one_summon = Button(root, text = 'End me !', bd = '0', image = (one_sum), command = roll) #made a button that does something
+def nothing():
+    print("nothing")
+
+one_summon = Button(root, bd = '0', image = (one_sum), command = roll) #made a button that rolls the gacha
 one_summon.place(x=150, y=400)
 
-ten_summon = Button(root, text = 'End me !', bd = '0', image = (ten_sum), command = kys) #made a button that does something
+ten_summon = Button(root, bd = '0', image = (ten_sum), command = nothing) #made a button that does nothing
 ten_summon.place(x=600, y=400)
 
-
+close = Button(root, bd = '0', image = (exit_butt), command = kys) #this is an exit button
+close.place(x=950, y=0)
 root.mainloop()
