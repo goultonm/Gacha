@@ -14,23 +14,22 @@ class servant:
     SR = rarity.SR
     SSR = rarity.SSR
 
-    names = ["Odessyeus" , "Mashu" , "Artoria Pendragon" , "Salter" , "Lily" , "Nero"]
+    names = ["Mafia Kajita" , "Mashu" , "Artoria Pendragon" , "Salter" , "Lily" , "Nero"]
     rarity = [SSR,R,SSR,SR,SR,SR]
 
     def __init__(self, name, rarity, num):
         self.name = name
         self.rarity = rarity
         self.num = num
-        print(num)
         if num < 10:
             self.str_num = "00"+str(num)
         elif num < 100:
             self.str_num = "0"+str(num)
         else:
             self.str_num = str(num)
-        self.file = "servant_" + self.str_num + ".png"
+        self.file = "FGOArt\servant_" + self.str_num + ".png"
 
-    def __repr__(self):
+    def __repr__(self):  #unscrambles the jargon numbers
         return self.name
 
     ssr_pool = []
@@ -40,8 +39,7 @@ class servant:
 servants = []
 for i in range (6):
     servants.append(servant(servant.names[i], servant.rarity[i], i))
-    print(servants[i].file)
-print(servants)
+
 
 for servant in servants:
     if servant.rarity == servant.rarity.SSR:
