@@ -118,4 +118,6 @@ one_summon.place(x = 380, y =750)
 ten_summon = Button(root, bd = '0', anchor = 's', image = ten_butt, command = nothing, )  # made a button that does nothing
 ten_summon.place(x = 900, y =750)
 
+
+
 root.mainloop()
